@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineReview - Reseñas de Películas</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">🎬 CineReview</div>
+
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#peliculas">Películas</a></li>
+                <li><a href="#reseñas">Reseñas</a></li>
+            </ul>
+
+            <button id="loginBtn" class="login-btn">
+                Iniciar sesión
+            </button>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- HERO -->
+        <section id="inicio" class="hero">
+            <div class="hero-content">
+                <p class="subtitle">TU OPINIÓN CUENTA</p>
+
+                <h1>
+                    Descubre películas.<br>
+                    <span>Comparte tu opinión.</span>
+                </h1>
+
+                <p>
+                    Encuentra nuevas películas, descubre qué piensan
+                    otros espectadores y comparte tus propias reseñas.
+                </p>
+
+                <a href="#peliculas" class="primary-btn">
+                    Explorar películas
+                </a>
+            </div>
+        </section>
+
+        <!-- BUSCADOR -->
+        <section class="search-section">
+            <h2>¿Qué película estás buscando?</h2>
+
+            <div class="search-box">
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Buscar película..."
+                >
+
+                <button id="searchBtn">
+                    🔎 Buscar
+                </button>
+            </div>
+        </section>
+
+        <!-- PELÍCULAS -->
+        <section id="peliculas" class="movies-section">
+
+            <div class="section-title">
+                <div>
+                    <p class="subtitle">PELÍCULAS</p>
+                    <h2>Películas destacadas</h2>
+                </div>
+            </div>
+
+            <div id="moviesContainer" class="movies-container">
+
+                <article class="movie-card">
+                    <div class="movie-image interstellar">
+                        <span class="movie-year">2014</span>
+                    </div>
+
+                    <div class="movie-info">
+                        <h3>Interestelar</h3>
+                        <p>Ciencia ficción • Drama</p>
+
+                        <div class="rating">
+                            ⭐ 4.8
+                        </div>
+
+                        <button class="review-btn"
+                                data-movie="Interestelar">
+                            Ver reseñas
+                        </button>
+                    </div>
+                </article>
+
+                <article class="movie-card">
+                    <div class="movie-image inception">
+                        <span class="movie-year">2010</span>
+                    </div>
+
+                    <div class="movie-info">
+                        <h3>Inception</h3>
+                        <p>Ciencia ficción • Acción</p>
+
+                        <div class="rating">
+                            ⭐ 4.7
+                        </div>
+
+                        <button class="review-btn"
+                                data-movie="Inception">
+                            Ver reseñas
+                        </button>
+                    </div>
+                </article>
+
+                <article class="movie-card">
+                    <div class="movie-image darkknight">
+                        <span class="movie-year">2008</span>
+                    </div>
+
+                    <div class="movie-info">
+                        <h3>The Dark Knight</h3>
+                        <p>Acción • Crimen</p>
+
+                        <div class="rating">
+                            ⭐ 4.9
+                        </div>
+
+                        <button class="review-btn"
+                                data-movie="The Dark Knight">
+                            Ver reseñas
+                        </button>
+                    </div>
+                </article>
+
+                <article class="movie-card">
+                    <div class="movie-image avatar">
+                        <span class="movie-year">2009</span>
+                    </div>
+
+                    <div class="movie-info">
+                        <h3>Avatar</h3>
+                        <p>Ciencia ficción • Aventura</p>
+
+                        <div class="rating">
+                            ⭐ 4.5
+                        </div>
+
+                        <button class="review-btn"
+                                data-movie="Avatar">
+                            Ver reseñas
+                        </button>
+                    </div>
+                </article>
+
+            </div>
+
+            <p id="noResults" class="no-results">
+                No se encontraron películas.
+            </p>
+
+        </section>
+
+        <!-- RESEÑAS -->
+        <section id="reseñas" class="reviews-section">
+
+            <div class="section-title">
+                <p class="subtitle">COMUNIDAD</p>
+                <h2>Últimas reseñas</h2>
+            </div>
+
+            <div class="reviews-container">
+
+                <article class="review-card">
+                    <div class="review-header">
+                        <div class="avatar-user">J</div>
+
+                        <div>
+                            <h3>Juan</h3>
+                            <span>Interestelar</span>
+                        </div>
+                    </div>
+
+                    <div class="stars">★★★★★</div>
+
+                    <p>
+                        Una película increíble. La historia,
+                        los efectos y la música hacen que sea
+                        una experiencia espectacular.
+                    </p>
+                </article>
+
+                <article class="review-card">
+                    <div class="review-header">
+                        <div class="avatar-user">M</div>
+
+                        <div>
+                            <h3>María</h3>
+                            <span>The Dark Knight</span>
+                        </div>
+                    </div>
+
+                    <div class="stars">★★★★★</div>
+
+                    <p>
+                        Excelente película. El desarrollo de los
+                        personajes y la actuación son excelentes.
+                    </p>
+                </article>
+
+                <article class="review-card">
+                    <div class="review-header">
+                        <div class="avatar-user">C</div>
+
+                        <div>
+                            <h3>Carlos</h3>
+                            <span>Inception</span>
+                        </div>
+                    </div>
+
+                    <div class="stars">★★★★☆</div>
+
+                    <p>
+                        Una película que te hace pensar y que
+                        merece verla más de una vez.
+                    </p>
+                </article>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 CineReview | Proyecto Desarrollo DevOps</p>
+    </footer>
+
+    <script src="js/app.js"></script>
+
+</body>
+</html>
