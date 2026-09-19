@@ -375,4 +375,17 @@ footer {
         border-radius: 8px;
         padding: 15px;
     }
+
+    .movie-image {
+    position: relative;
+    height: 160px;
+    overflow: hidden;
+}
+.movie-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
 }
